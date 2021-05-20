@@ -12,15 +12,6 @@ Open endpoints require no Authentication.
 
 **Auth required** : NO
 
-**Data constraints**
-
-```json
-{
-    "username": "[valid email address]",
-    "password": "[password in plain text]"
-}
-```
-
 **Data example**
 
 ```json
