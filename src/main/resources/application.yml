@@ -1,7 +1,6 @@
 server:
   port: 8080
 
-locpnguyen.security.jwt.secret: otherpeopledontknowit
 spring:
   application:
     name: home-test
@@ -9,17 +8,22 @@ spring:
     filter:
       dispatcher-types: REQUEST,ERROR
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/travel_list
-    username: postgres
+#    type: com.zaxxer.hikari.HikariDataSource
+#    url: jdbc:postgresql://localhost:5432/travel_list
+#    username: postgres
+#    password: admin
+    url: jdbc:mysql://localhost:3306/travel_list?useSSL=false
+    username: root
     password: admin
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
-    database: postgresql
+    database: mysql
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 debug: true
 
 security:
