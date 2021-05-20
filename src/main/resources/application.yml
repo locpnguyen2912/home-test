@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+locpnguyen.security.jwt.secret: otherpeopledontknowit
+spring:
+  application:
+    name: home-test
+  security:
+    filter:
+      dispatcher-types: REQUEST,ERROR
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/travel_list
+    username: postgres
+    password: admin
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+debug: true
+
+security:
+  authentication:
+    jwt:
+      # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+      base64-secret: MjI3YzU0OTQ4OTg4YWM4MmM1YWU1NzIyNWVkZTdmM2NjM2Y4NTUzZTdlZjEyZmNjMWQyMDlkOGYzYTEyM2Q3MmMyNjM2ZGM5ZGNkZWI1MDU1NzVhNTRlNGJhMDBlZDkyOTQ4M2UzZjgyZjM2OTFiYWYyNzA4ZTgyZGUxNjgxNWQ=
+      # Token is valid 24 hours
+      token-validity-in-seconds: 86400
+      token-validity-in-seconds-for-remember-me: 2592000
