@@ -23,7 +23,7 @@ Open endpoints require no Authentication.
 
 ## Endpoints that require Authentication
 
-* [Login] : `POST /api/place/list`
+* [List places] : `POST /api/place/list`
 
 **URL** : `/api/place/list`
 
@@ -41,18 +41,18 @@ Open endpoints require no Authentication.
 
 ```json
 {
-            "id": 1,
-            "name": "Tokyo",
-            "visited": 0
-        },
-        {
-            "id": 2,
-            "name": "Saigon",
-            "visited": 1
-        },
-        {
-            "id": 3,
-            "name": "Hanoi",
-            "visited": 1
-        }
+    "id": 1,
+    "name": "Tokyo",
+    "visited": 0
+},
+{
+    "id": 2,
+    "name": "Saigon",
+    "visited": 1
+},
+{
+    "id": 3,
+    "name": "Hanoi",
+    "visited": 1
+}
 ```
