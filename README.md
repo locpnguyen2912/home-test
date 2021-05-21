@@ -6,7 +6,7 @@ Open endpoints require no Authentication.
 
 * [Login] : `POST /api/auth.login`
 
-**URL** : `/api/login/`
+**URL** : `/api/auth.login/`
 
 **Method** : `GET`
 
